@@ -1,0 +1,109 @@
+#cover {
+// Size
+  width: 100%;
+  min-height: 90%;
+
+// Background
+  background-image: url($img-cover);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  @include cover();
+
+// Font
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+  color: $color-1;
+  text-align: center;
+
+// Medium
+  @include bp-medium() {
+    min-height: 400px;
+    background: url($img-cover) no-repeat scroll center center;
+    @include cover();
+  }
+
+  @include bp-small() {
+    min-height: 100px;
+    background: $color-4;
+  }
+
+// Body
+  .body {
+  // Display
+    display: table;
+    div {display: table-row;}
+
+  // Normal Position
+    position: fixed;
+    @include transform(translate(-50%,-50%));
+    left: 50%;
+    top: 50%;
+    z-index: 5;
+
+  // Medium Position
+    @include bp-medium () {
+      width: 100%;
+      position: relative;
+      padding: 5em 0;
+      left: 0;
+      top: 0;
+      @include transform(none);
+    }
+    @include bp-small() {
+      padding: 2em 0;
+    }
+  }
+
+// Cover Image
+  #cover-img {
+    max-height: 200px;
+    @extend .img-circle;
+  }
+
+// Title
+  .title {
+    font-size: 3em;
+    text-shadow: .08em .08em $color-3;
+    @include bp-small() {
+      color: $color-1;
+      text-shadow: .08em .08em $color-3;
+    }
+  }
+
+// Arrow
+  .arrow {
+    font-size: 2.5rem;
+    color: $color-3;
+    &:hover {
+      color: $color-4;
+    }
+    i {
+      @include transition(all 0.5s ease 0s);
+      &:hover {
+        @include transform(scale(1.5));
+      }
+    }
+    @include bp-small() {
+      display: none;
+    }
+  }
+
+// Signiture
+  #sig {
+    height: 2.5em;
+    position: absolute;
+    bottom: 6em;
+    right: 1em;
+    @include bp-medium () {
+      display: none;
+    }
+  }
+
+  .btn {
+    display: none !important;
+    @include bp-medium() {
+      display: table-row !important;
+    }
+  }
+}

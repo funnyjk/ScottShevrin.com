@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+$btnClr: #fff;
+$btnBg: #AA4F46;
+$btnShd: #521E18;
+$spltBrd: #521E18;
+
+/* TODO(scott): clean up guidlines */
+#navbar {
+  // font-family: 'Titillium Web', sans-serif;
+  font-family: 'Lato', sans-serif;
+  position: fixed;
+  z-index: 50;
+  display: block;
+  font-size: 1.2rem;
+  @include bp-small() {display: block;}
+  .split-button{ 
+    @include split-border($spltBrd);
+  }
+  a {
+    @extend %button;
+    @include button-shadow($btnShd);
+    color: $btnClr;
+    background: $btnBg;
+  }
+  .nav {
+    position: fixed;
+    z-index: 6;
+    li {display: inline;}
+    top: 0;
+    left: 0;
+    @include bp-medium() {
+      position: fixed;
+      z-index: 10;	
+      left: -100%;
+      max-width: 100%;
+      @include transition(all 1s ease 0s);
+      text-align: left;
+      ul {
+        margin: 0;
+        list-style: none;
+        padding: 1em;
+      }
+    }
+  }
+  .button {
+    display: none;
+    @include bp-small() {
+      position: fixed;
+      z-index: 10;
+      top: .5rem;
+      right: 1rem;
+      // font-size: 1.5rem;
+      @include transition(all 1s ease 0s);
+      @include bp-small() {display: block;}
+      i {
+      	@include transition(all 1s ease 0s);
+      }
+    }
+  }
+  #nav-sub-list {
+    opacity: 0;
+    @include transition(all 1s ease 0s);
+    font-size: .8em;
+  }
+  .active {
+    opacity: 1 !important;
+  }
+  .top {
+    z-index: 50;
+  }
+}
+@media print {
+  #navbar {
+    display: none;
+  }
+}
+.active {
+  .nav {
+    left: 0 !important;
+  }
+  .button {
+    @include transform(scale(1.5));
+    i {
+      @include transform(rotate(360deg));
+    }
+  }
+}
+
+.nav-trigger, .nav-mobile {
+  display: none;
+
+  @include bp-medium() {
+    display: inherit;
+  }
+}
+
+.nav-mobile {
+  list-style: none;
+  background: #111;
+  width: 10rem;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -10rem;
+  z-index: 0;
+}

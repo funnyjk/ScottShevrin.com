@@ -1,0 +1,31 @@
+<% extend 'index.html' %>
+
+<!-- <span>content</span> -->
+
+<% block 'work' : %>
+    <% include 'templates/ectjs/resume-template.ect', {parts: @work, head: "WORK"} %>
+<% end %>
+
+<% block 'education' : %>
+    <% include 'templates/ectjs/resume-template.ect', {parts: @education, head: "EDUCATION"} %>
+<% end %>
+
+<% block 'research' : %>
+    <% include 'templates/ectjs/resume-template.ect', {parts: @research, head: "RESEARCH / PROJECTS"} %>
+<% end %>
+
+<% block 'related_courses' : %>
+    <% include 'templates/ectjs/resume-template.ect', {parts: @related_courses, head: "RELATED COURSES"} %>
+<% end %>
+
+<% block 'skills' : %>
+    <% include 'templates/ectjs/resume-template.ect', {parts: @skills, head: "TECHNICAL SKILLS"} %>
+<% end %>
+
+<% block 'honors' : %>
+    <% include 'templates/ectjs/resume-template.ect', {parts: @honors, head: "HONORS / AWARDS"} %>
+<% end %>
+
+<% block 'activities' : %>
+    <% include 'templates/ectjs/resume-template.ect', {parts: @activities, head: "ACTIVITIES"} %>
+<% end %>

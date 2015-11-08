@@ -1,0 +1,176 @@
+{
+	"work": [{
+		"place":		"Mount Laurel, NJ",
+		"title":	"Conversion Technologies International, Inc.",
+		"date":		"May 2015 - September 2015",
+		"descript":	"IT Technician",
+		"list": [
+			"Provided in-house tech support to over 50 employees",
+			"Focused on hardware and software support",
+			"Managed company’s server network (in-house and offsite)"
+		],
+		"link":		"ctiimage.com"
+	},	{
+	"place":		"Marlton, NJ",
+	"title":	"Tech Commandos",
+	"date":		"August 2013 - April 2015",
+	"descript":   "IT Technician",
+	"list": [
+		"Managed company's server network; responsible for hosting clients’ ACT (CRM) data and remote computers",
+		"Provided over the phone and in-person tech support to hundreds of companies and individual clients",
+		"Evaluated and helped develop new software and web applications"
+	],
+	"link":		"Techcommandos.com"
+	}],
+	"education": [{
+		"place":		"Philadelphia, PA",
+		"title":	"Drexel University",
+		"date":		"Anticipated Graduation: June 2018",
+		"descript":	"Bachelor of Science in Computer Engineering • Minor in Mathematics",
+		"list": ""
+	}, {
+		"place":		"Mount Laurel, NJ<br>GPA 3.5",
+		"title":	"Burlington County College",
+		"date":		"Earned: May 2015",
+		"descript":	"Associates of Science in Engineering",
+		"list": []
+	}],
+	"research": [{
+		"place":		"Mt. Laurel, NJ",
+		"title":		"Undergraduate Research",
+		"date":		"Spring - Summer 2014",
+		"descript":	"Research Assistant",
+		"list": [
+			"Developed a web-powered telescope protocol",
+			"Researched cutting edge technology (e.g., NodeJs, WebSockets, Raspberry Pi)",
+			"Provided a seamless user experience controlling the telescopes"
+		],
+		"link":		"Telescopejs.info"
+	 }, {
+		"place":		"github.com/funnyjk/nodecar",
+		"title":		"Nodecar",
+		"date":		"Spring 2014",
+		"descript":	"Designer / Programmer",
+		"list": [
+			"Created multiple web servers to drive a car remotely utilizing Node.js, Raspberry Pi and Arduino technologies",
+			"Programmed Arduino to interpret data from phone tilt sensors in order to steer vehicle",
+			"Recipient of “Best Hardware Hack” Award"
+		],
+		"link":		"github.com/funnyjk/nodecar"
+	 },	{
+		"place":		"HackRU",
+		"title":		"Smarter Dumb Phones",
+		"date":		"Fall 2012",
+		"descript":	"Designer / Programmer",
+		"list": [
+			"Developed a PHP powered service that relayed relevant information to users from queries over text messaging",
+			"Recipient of “Mashery API” Award and “Twilio API” Award"
+			],
+		"link":		"hackerleague.org/hackathons/hackru-fall-2012/wikipages/507492a38f251d0002000037"
+	 }, {
+	 	"place": "Personal",
+		"title": "Customized Tabletop Pinball",
+		"date": "Present",
+		"descript": "Designer / Team Member",
+		"list": [
+			"Constructing pinball machine from scratch",
+			"Using AutoCAD to aid in design process",
+			"Purpose is to acquire knowledge of the mechanics of pinball in order to advance the design to a digital platform"
+		]
+	 },	{
+		"place":		"scottshevrin.com",
+		"title":		"Personal Website",
+		"date":		"Present",
+		"descript":	"Designer / Programmer",
+		"list": [
+			"Designed a landing page for my personal portfolio",
+			"Created a Node.js server to host website using several modular template engines",
+			"Developed custom CSS using SASS engine and implemented HTML template engine (e.g. EJs and ECT)",
+			"Employed mobile and desktop friendly practices to provide seamless experience on any platform"
+		],
+		"link":		"scottshevrin.com"
+	 }],
+	"related_courses": [{
+		"list": [
+			"Foundations of Electric Circuits",
+			"Fundamentals of Materials",
+			"Digital Logic Design",
+			"Discrete Mathematics",
+			"Differential Equations",
+			"Computer Programming I",
+			"Engineering Design",
+			"Engineering Statics"
+		]
+	}],
+  "skills": [{
+    "title": "Programming",
+    "list": [
+      "JavaScript;",
+      "Node.js;",
+      "Python;",
+      "MATLAB;",
+      "Ruby;",
+      "Ruby on Rails;",
+      "MongoDb;",
+      "Java;",
+      "D3.js;",
+      "Visual Basic;",
+      "C++;",
+      "OpenCV;",
+      "Sinatra;",
+      "PHP;",
+      "WebSockets;",
+      "Git;",
+      "JQuery;",
+      "Angular.js;",
+      "SASS;",
+      "CSS3;",
+      "HTML5;",
+      "EJS;",
+      "RESTful Systems;",
+      "SQL;",
+      "Unity;"
+    ]}, {
+    "title": "Software",
+    "list": [
+      "AutoCAD;",
+      "SketchUp;",
+      "Filemaker;",
+      "SolidWorks;",
+      "Adobe Suite (Photoshop, Illustrator, Premiere);",
+      "Amazon Web Services (AWS);",
+      "Microsoft Office Suite (Excel, Access, PowerPoint, Word);"
+    ]}, {
+    "title": "Hardware",
+    "list": [
+      "Arduino;",
+      "Raspberry Pi;",
+      "Oscilloscope;",
+      "Multimeter;"
+    ]}, {
+    	"title": "OS:",
+    	"list": [
+      	"Windows;",
+      	"Unix (Linux, OSX);"
+    ]
+}],
+	"honors": [{
+		"list": [
+			"Member, Phi Theta Kappa Honors Society",
+			"Phi Theta Kappa Scholarship, Drexel University, 2015 - Present",
+			"Dean’s List, Burlington County College",
+			"Best Hardware Hack, HackRU Spring 2014, Rutgers University, New Brunswick, NJ",
+			"Mashery API Award, HackRU Fall 2012, Rutgers University, New Brunswick, NJ",
+			"Twilio API Award, HackRU Fall 2012, Rutgers University, New Brunswick, NJ",
+			"Highest Seeded Rookie team, Philadelphia Regionals of FIRST Robotics competition, Spring 2011",
+			"Rookie Inspiration Award, Philadelphia Regionals of FIRST Robotics competition, Spring 2011"
+		]
+	}],
+	"activities": [{
+		"descript": "Member, (IEEE), 2015 - present",
+		"list": ["Institute of Electrical and Electronics Engineers"]
+	},{
+		"descript": "Member, (NY Tech Meetup), 2012 – Present",
+		"list": []
+	}]
+}

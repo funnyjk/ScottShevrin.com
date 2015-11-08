@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* Scott Shervin for scottshevrin.com */
+
+@import 'app/components/mixins';
+@import 'app/components/components';
+
+@import 'app/globals/variables';
+@import 'app/globals/global';
+
+@import 'app/sections/cover';
+@import 'app/sections/navbar';
+@import 'app/sections/resume';
+
+@import 'app/plugins/shame';

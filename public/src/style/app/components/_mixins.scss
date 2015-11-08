@@ -1,0 +1,117 @@
+// /* background */
+@mixin cover() {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+// /* media break-points */
+@mixin bp-xsmall() {
+	@media screen and (max-width : 320px) {
+		@content;
+	}
+}
+@mixin bp-small() {
+	@media screen and (max-width : 480px) {
+		@content;
+	}
+}
+@mixin bp-medium() {
+	@media screen and (max-width : 1024px) {
+		@content;
+	}
+}
+
+// /* animation */
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation_name} { @content; }
+	@-moz-keyframes #{$animation_name} { @content; }
+	@-ms-keyframes #{$animation_name} { @content; }
+	@-o-keyframes #{$animation_name} { @content; }
+	@keyframes #{$animation_name} { @content; }
+}
+@mixin animation($str) {
+	-webkit-animation: #{$str};
+	-moz-animation: #{$str};
+	-ms-animation: #{$str};
+	-o-animation: #{$str};
+	animation: #{$str};
+}
+
+// /* transition */
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+@mixin transform($args...) {
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-ms-transform: $args;
+	-o-transform: $args;
+	transform: $args;
+}
+
+@mixin browser-sup($str, $val...) {
+  -webkit-#{$str}: $val;
+  -moz-#{$str}: $val;
+  -ms-#{$str}: $val;
+  -os-#{$str}: $val;
+  #{$str}: $val;
+}
+
+%clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin button-shadow($shadow-color) {
+	@include browser-sup(box-shadow,0px 4px $shadow-color);
+	&:hover {
+		@include browser-sup(box-shadow,0px 2px $shadow-color);
+		@include transform(translateY(2px));
+	}
+	&:active {
+		@include browser-sup(box-shadow,0px 0px 0px $shadow-color);
+		@include transform(translateY(4px));
+	}
+}
+
+@mixin split-border($border-color) {
+	a {
+		border-right: 1px solid $border-color; 
+		border-left: 1px solid $border-color;
+	}
+	& > :first-child {
+		border-right: 1px solid $border-color;
+		border-left: 0;
+	}
+	& > :last-child {
+		border-right: 0;
+		border-left: 1px solid $border-color;
+	}
+}
+@mixin flex-child {
+	@include bp-small() {
+		flex: 100%;
+	}
+}
+
+@mixin flex($val) {
+	-webkit-box-flex: $val;     /* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: $val;        /* OLD - Firefox 19- */
+	width: $val;             /* For old syntax, otherwise collapses. */
+	-webkit-flex: $val;         /* Chrome */
+	-ms-flex: $val;           /* IE 10 */
+	flex: $val;
+}

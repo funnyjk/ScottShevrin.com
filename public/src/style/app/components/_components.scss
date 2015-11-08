@@ -1,0 +1,87 @@
+$shadow-color: #222;
+$border-color: #fff;
+
+%button {
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	padding: .5em;
+	margin: .5em;
+	text-decoration:none;
+	color: #222;
+	background: #888;
+	@include transition(all 0.2s ease);
+	@include browser-sup(border-radius,5px);
+	@include button-shadow($shadow-color);
+}
+.img-circle {
+	@include browser-sup('border-radius', 50%);
+	@include browser-sup('box-shadow',0 0 8px rgba(0, 0, 0, .8));
+}
+.split-button {
+	display: inline-table !important;
+	@include split-border($border-color);
+	a {
+		margin: .5em 0 !important;
+		border-radius: 0 !important;
+	}
+	& > :first-child {
+		margin-left: .5em !important;
+		border-radius: 5px 0px 0px 5px !important;
+		border-left: 0;
+	}
+	& > :last-child {
+		margin-right: .5em !important;
+		border-radius: 0px 5px 5px 0px !important;
+		border-right: 0;
+	}
+}
+
+[class^="grid-col"] {
+	padding: 0 1.5em;
+	// width: 100%;
+}
+.grid-row .grid-row {
+	margin: 0 -1.5em;
+}
+.grid-row:before, .grid-row:after {
+	content: "";
+	display: table;
+}
+.grid-row:after {
+	clear: both;
+}
+@media only screen {
+	[class^="grid-col"] {
+		float: left;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
+[class$="-6"] {
+	width: 50%;
+	@extend %col-small;
+}
+[class$="-4"] {
+	width: 33.33%;	
+	@extend %col-small;
+}
+[class$="-8"] {
+	width: 66.66%;	
+	@extend %col-small;
+}
+[class$="-3"] {
+	width: 25%;	
+	@extend %col-small;
+}
+%col-small{
+	@include bp-small() {
+		width: 100%;
+	}
+}
+%flex {
+	display: flex;
+	flex-flow: row wrap;
+}

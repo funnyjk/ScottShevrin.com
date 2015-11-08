@@ -1,0 +1,35 @@
+<% descriptionHelper = (part) -> %>
+  <% if part.descript? : %>
+    <div class="description"><%- part.descript %></div>
+  <% end %>
+  <% if part.date? : %>
+    <div class="description">[ <%- part.date %> ] | <%- part.place %></div>
+  <% end %>
+<% end %>
+
+<% listHelper = (item) -> %>
+  <li class="bullet"><%= item %></li>
+<% end %>
+
+<% entryHelper = (part) -> %>
+  <div class="entry">
+    <div class="title"><%- part.title %></div>
+    <%- descriptionHelper part %>
+    <ul class="list">
+      <% for j in part.list : %>
+        <%- listHelper j %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<% if @parts?.length : %>
+<div class="resume-section">
+  <div class="header"><%= @head %></div>
+<% for part in @parts : %>
+  <%- entryHelper part %>
+<% end %>
+</div>
+<% else : %>
+<p>List is empty</p>
+<% end %>
